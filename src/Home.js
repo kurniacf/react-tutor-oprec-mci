@@ -13,7 +13,7 @@ function App() {
 
     return (
         <div className="App">
-        <BlogList blogs={blogs} />
+            <BlogList blogs={blogs} />
         </div>
     );
 }
