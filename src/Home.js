@@ -9,10 +9,14 @@ const Home = () => {
         {title: '(MCI Love) Miracle Competition In Love', body: 'I like you, but you dont like me', author: 'Kurnia Cahya', id: 4}
     ])
 
+    const handleDelete = (id) => {
+        const newBlogs = blogs.filter(blog => blog.id !== id);
+        setBlogs(newBlogs);
+    }
+
     return (
         <div className="home">
-            <BlogList blogs={blogs} title="All Blogs" />
-            <BlogList blogs={blogs.filter(blog => blog.author === 'Kurnia Cahya')} title="Kurnia's Blogs" />
+            <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
         </div>
     );
 }
